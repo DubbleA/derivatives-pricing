@@ -32,6 +32,7 @@ int main() {
 
     // Call your Monte Carlo function
     double result = SimpleMonteCarlo1(Expiry, Strike, Spot, Vol, r, NumberOfPaths);
+    double result = SimpleMonteCarlo1(2, 104, 109, Vol, r, NumberOfPaths);
 
     // Print the result
     cout << "The price is " << result << "\n";

@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//calculates average payoff through simulation. therefore all negative cases end up at 0. 
 double SimpleMonteCarlo1(double Expiry, double Strike,
                          double Spot, double Vol, double r,
                          unsigned long NumberOfPaths)
