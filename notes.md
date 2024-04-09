@@ -101,3 +101,37 @@ $f(S_0e^{(r - \frac{1}{2} \sigma^2)T + \sigma \sqrt{T}x})$ where $f(S) = (S - K)
 - If a class has a pure virtual function then it should have a virtual destructor
 
 ## Chapter 4 Bridging with a virtual constructor
+
+4.6 Beware of new. Everytime we copy a bridged object, we are implicitly using the new command. So if our code involves a lot of 
+passing around objects, its important to not copy unnecessarily (we can avoid this by using move semantics or pass by reference).
+
+When we create variables normally, (not using new), the compiler gets them an area of memory known as the stack. The important thing is that these
+variables are always destroyed in reverse order from their creation (which is why its called the stack). Each variable as declared is added to top of the stack and deleted when it is removed from the top. If we want to destroy variables in a different order (what happens when we use new), we would have to scan the stack down to the point where the variable was stored then move all the variables further up the stack down a bit to cover up the gap caused by the release of memory. 
+
+The compiler therefore does not use the stack for new but instead uses a different area of memory known as a heap. For this area of memory, the code keeps track of which pieces are in use and which pieces are not. Everytime new is called, the compiler has to find an empty piece of memory which is large enough and mark the memory as being in use. When delete is called, the code marks the memory as being free again.
+
+### Key Points
+
+- Cloning gives us a method of implementing a virtual copy constructor
+- The rule of three says that if we need any one of a copy constructor, destructor, and assignment operator then we need all three
+- We can use a wrapper class to hide all the memory handling, allowing us to treat a polymorphic object just like any other object
+- the bridge pattern allows us to separate interface and implementation, enabling us to vary the two indepently
+- the new command is slow
+- We have to be careful to ensure the self-assignment does not cause crashes
+
+
+## Chapter 5 Strategies, Decoration, and Statistics
+
+Standard design pattern: the decorator pattern. We added functionality to a class without changing the interface. This process is called decoration. The most important part is that, since the decorated class has the same interface as the undecorated class, any decoration which can be applied to the original class can also be applied to the decorated class. We can therefore decorate as many times as we wish, but it might not be useful.
+
+In this chapter we have seen that we can allow the user to specify aspects of how an algorithm works by making part of the algorithm be carried out in an inputed class. We have also examined the techniques of decoration and templatization. 
+
+### Key Points
+- Routines can be made more flexible by using the strategy pattern
+- Making part of an algorithm be implemented by an inputted class is called the strategy pattern
+- For code that is very similar accross many different classes, we can use tempates to save time in rewriting
+- If we want containers of polymorphic objects, we must use wrappers or pointers
+- Decoration is the technique of adding functionality by placing a class around a class which has the same interface; i.e. the outer class is inherited from the same base class
+- A class can be decorated several times
+
+# design patterns

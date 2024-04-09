@@ -1,0 +1,47 @@
+Call Option:
+Spot price (S): 42
+Strike price (K): 40
+Time to expiration (T): 0.5
+Volatility (σ): 0.2
+Risk-free interest rate (r): 0.1
+Calculated Price: 4.759422392
+
+Put Option:
+Spot price (S): 42
+Strike price (K): 40
+Time to expiration (T): 0.5
+Volatility (σ): 0.2
+Risk-free interest rate (r): 0.1
+Calculated Price: 0.808816879
+
+Call Option:
+Spot price (S): 1.07
+Strike price (K): 6
+Time to expiration (T): 0.5
+Volatility (σ): 1.12
+Risk-free interest rate (r): 0.1
+Calculated Price: 0.000000001
+
+Put Option:
+Spot price (S): 1.07
+Strike price (K): 6
+Time to expiration (T): 0.5
+Volatility (σ): 1.12
+Risk-free interest rate (r): 0.1
+Calculated Price: 4.952621426
+
+Call Option:
+Spot price (S): 60.4
+Strike price (K): 90
+Time to expiration (T): 0.5
+Volatility (σ): 0.1959
+Risk-free interest rate (r): 0.1
+Calculated Price: 0.037109921
+
+Put Option:
+Spot price (S): 60.4
+Strike price (K): 90
+Time to expiration (T): 0.5
+Volatility (σ): 0.1959
+Risk-free interest rate (r): 0.1
+Calculated Price: 29.588292619
