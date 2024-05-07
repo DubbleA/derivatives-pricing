@@ -2,9 +2,9 @@
 
 This project is an implementation of a C++ derivatives pricing engine, based on the concepts and techniques covered in Mark Joshi's book "C++ Design Patterns & Derivatives Pricing". The engine utilizes various design patterns and C++ features to create a flexible and extensible framework for pricing financial derivatives.
 
-For my full notes check out +[Chapter Notes](notes.md)
+For my full notes check out + [Chapter Notes](notes.md)
 
-For the original project roadmap and goals check out +[roadmap.md](roadmap.md)
+For the original project roadmap and goals check out + [roadmap.md](roadmap.md)
 
 ## Key Concepts and Learnings
 
