@@ -1,7 +1,5 @@
 # Notes:
 
-## Chapter 1
-
 The model for stock price evolution is 
 
 $dS_t = \mu S_tdt + \sigma S_t dW_t$ (1.1)
@@ -79,7 +77,7 @@ $f(S_0e^{(r - \frac{1}{2} \sigma^2)T + \sigma \sqrt{T}x})$ where $f(S) = (S - K)
 - Classes allow us to separate the design of the interface from the coding of the implementation
 
 
-## Chapter 2 Encapsulation
+## Encapsulation
 
 ### Key Points
 - Using a pay-off class allows us to add extra forms of pay-offs without modifying our Monte Carlo routine.
@@ -89,7 +87,7 @@ $f(S_0e^{(r - \frac{1}{2} \sigma^2)T + \sigma \sqrt{T}x})$ where $f(S) = (S - K)
 - The open-closed principline says that code should be open for extension but closed for modification
 - Private data helps us to separate interface from implementation
 
-## Chapter 3 Inheritance and virtual functions
+## Inheritance and virtual functions
 
 ### Key Points
 
@@ -100,7 +98,7 @@ $f(S_0e^{(r - \frac{1}{2} \sigma^2)T + \sigma \sqrt{T}x})$ where $f(S) = (S - K)
 - Virtual functions are implemented via a table of function pointers
 - If a class has a pure virtual function then it should have a virtual destructor
 
-## Chapter 4 Bridging with a virtual constructor
+## Bridging with a virtual constructor
 
 4.6 Beware of new. Everytime we copy a bridged object, we are implicitly using the new command. So if our code involves a lot of 
 passing around objects, its important to not copy unnecessarily (we can avoid this by using move semantics or pass by reference).
@@ -120,7 +118,7 @@ The compiler therefore does not use the stack for new but instead uses a differe
 - We have to be careful to ensure the self-assignment does not cause crashes
 
 
-## Chapter 5 Strategies, Decoration, and Statistics
+## 5 Strategies, Decoration, and Statistics
 
 Standard design pattern: the decorator pattern. We added functionality to a class without changing the interface. This process is called decoration. The most important part is that, since the decorated class has the same interface as the undecorated class, any decoration which can be applied to the original class can also be applied to the decorated class. We can therefore decorate as many times as we wish, but it might not be useful.
 
@@ -133,5 +131,3 @@ In this chapter we have seen that we can allow the user to specify aspects of ho
 - If we want containers of polymorphic objects, we must use wrappers or pointers
 - Decoration is the technique of adding functionality by placing a class around a class which has the same interface; i.e. the outer class is inherited from the same base class
 - A class can be decorated several times
-
-# design patterns
